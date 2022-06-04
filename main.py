@@ -29,7 +29,7 @@ my_personal_email = os.environ.get("PERSONAL_EMAIL")
 
 try:
     response = requests.get(url = product_url, headers = headers)
-except (ConnectionError, ConnectionResetError, ConnectionAbortedError, ConnectionRefusedError) as error:
+except (ConnectionError) as error:
     print(f"{error} type error occurred")
 else:
     # If requests was successful, we can proceed to create BeautifulSoup
